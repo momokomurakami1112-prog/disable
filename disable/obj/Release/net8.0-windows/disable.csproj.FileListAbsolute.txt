@@ -1,0 +1,16 @@
+C:\Users\m_murakami\source\repos\disable\disable\bin\Release\net8.0-windows\disable.exe
+C:\Users\m_murakami\source\repos\disable\disable\bin\Release\net8.0-windows\disable.deps.json
+C:\Users\m_murakami\source\repos\disable\disable\bin\Release\net8.0-windows\disable.runtimeconfig.json
+C:\Users\m_murakami\source\repos\disable\disable\bin\Release\net8.0-windows\disable.dll
+C:\Users\m_murakami\source\repos\disable\disable\bin\Release\net8.0-windows\disable.pdb
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.Form1.resources
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.csproj.GenerateResource.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.AssemblyInfoInputs.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.AssemblyInfo.cs
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.csproj.CoreCompileInputs.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.dll
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\refint\disable.dll
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.pdb
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\disable.genruntimeconfig.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Release\net8.0-windows\ref\disable.dll
