@@ -60,9 +60,10 @@ namespace disable
 
         private void OutputBlockButton_Click(object sender, EventArgs e)
         {
+            BlockTextBox.Text = "";
             if (!File.Exists(DesignerFilePathTextBox.Text))
             {
-                MessageBox.Show("ファイルが見つかりません");
+                MessageBox.Show("ファイルが見つかりません。");
                 return;
             }
 
@@ -71,8 +72,16 @@ namespace disable
 
             // コントロール名取得
             _controlNameList = ExtractGcInputControls(designerText);
-            // 「xxx.Enable = False」を作成
-            BlockTextBox.Text = BuildEnableFalseBlock(_controlNameList);
+            // ユーザー指定取得
+            string property = GetSelectedPropertyName();
+            string propertyValue = GetSelectedPropertyValue();
+
+            if (string.IsNullOrWhiteSpace(property) || string.IsNullOrWhiteSpace(propertyValue))
+            {
+                MessageBox.Show("ユーザー指定がされていません。");
+                return;
+            }
+            BlockTextBox.Text = BuildEnableFalseBlock(_controlNameList, property,propertyValue);
         }
 
         private List<string> ExtractGcInputControls(string designerText)
@@ -92,23 +101,110 @@ namespace disable
             return results;
         }
 
-        private string BuildEnableFalseBlock(List<string> controlNames)
+        private void CustomPropertyRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CustomPropertyRadioButton.Checked)
+            {
+                CustomPropertyTextBox.Enabled = true;
+            }
+            else
+            {
+                CustomPropertyTextBox.Text = "";
+                CustomPropertyTextBox.Enabled = false;
+            }
+        }
+
+        private void CustomPropertyValueRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CustomPropertyValueRadioButton.Checked)
+            {
+                CustomPropertyValueTextBox.Enabled = true;
+            }
+            else
+            {
+                CustomPropertyValueTextBox.Text = "";
+                CustomPropertyValueTextBox.Enabled = false;
+            }
+        }
+
+        private string GetSelectedPropertyName()
+        {
+            if (EnabledRadioButton.Checked)
+            {
+                return "Enabled";
+            }
+            else if (ReadOnlyRadioButton.Checked)
+            {
+                return "ReadOnly";
+            }
+            else if (TabStopRadioButton.Checked)
+            {
+                return "TabStop";
+            }
+            else if (CustomPropertyRadioButton.Checked)
+            {
+                return CustomPropertyTextBox.Text;
+            }
+
+            return string.Empty;
+        }
+
+        private string GetSelectedPropertyValue()
+        {
+            if (TrueRadioButton.Checked)
+            {
+                return "True";
+            }
+            else if (FalseRadioButton.Checked)
+            {
+                return "False";
+            }
+            else if (CustomPropertyValueRadioButton.Checked)
+            {
+                return CustomPropertyValueTextBox.Text;
+            }
+
+            return string.Empty;
+        }
+
+
+
+        private string BuildEnableFalseBlock(List<string> controlNames,string property,string propertyValue)
         {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.AppendLine();
-            stringBuilder.AppendLine("' ===== Disabled Start =====");
+            stringBuilder.AppendLine("' ===== Block Start =====");
             stringBuilder.AppendLine();
+
+
             foreach (string name in controlNames)
             {
-                stringBuilder.AppendLine("        Me." + name + ".Enabled = False");
+                stringBuilder.AppendLine($"Me.{name}.{property} = {propertyValue}");
             }
             stringBuilder.AppendLine();
-            stringBuilder.AppendLine("' ===== Disabled End =====");
+            stringBuilder.AppendLine("' ===== Block End =====");
             stringBuilder.AppendLine();
             return stringBuilder.ToString();
         }
 
         #endregion
+
+
+        private async void SelectButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(BlockTextBox.Text))
+            {
+                MessageBox.Show("ブロックが作成されていません。");
+                return;
+            }
+            BlockTextBox.Focus();
+            BlockTextBox.SelectAll();
+            BlockTextBox.Copy();
+
+            CopyStatusLabel.Visible = true;
+            await Task.Delay(1500);
+            CopyStatusLabel.Visible = false;
+        }
 
 
     }
