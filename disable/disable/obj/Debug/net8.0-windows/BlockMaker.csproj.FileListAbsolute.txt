@@ -1,0 +1,16 @@
+C:\Users\m_murakami\source\repos\disable\disable\bin\Debug\net8.0-windows\BlockMaker.exe
+C:\Users\m_murakami\source\repos\disable\disable\bin\Debug\net8.0-windows\BlockMaker.deps.json
+C:\Users\m_murakami\source\repos\disable\disable\bin\Debug\net8.0-windows\BlockMaker.runtimeconfig.json
+C:\Users\m_murakami\source\repos\disable\disable\bin\Debug\net8.0-windows\BlockMaker.dll
+C:\Users\m_murakami\source\repos\disable\disable\bin\Debug\net8.0-windows\BlockMaker.pdb
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.Form1.resources
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.csproj.GenerateResource.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.AssemblyInfoInputs.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.AssemblyInfo.cs
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.csproj.CoreCompileInputs.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.dll
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\refint\BlockMaker.dll
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.pdb
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\BlockMaker.genruntimeconfig.cache
+C:\Users\m_murakami\source\repos\disable\disable\obj\Debug\net8.0-windows\ref\BlockMaker.dll
